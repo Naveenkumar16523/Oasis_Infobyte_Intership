@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+nav .logo {
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  cursor: pointer;
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.hire__me {
+  background-color: var(--primary-color);
+  color: #000000;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.portfolio {
+  color: var(--primary-color);
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #000000;
+  
+}
+
+.image {
+  display: grid;
+  place-items: center;
+  background-size: auto;
+}
+
+.image img {
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.px-3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.border-left {
+    border-left: 4px solid;
+}
+
+.border-primary {
+    border-color: #007bff;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-square {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    border-radius: 0.25rem;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-light {
+    color: #f8f9fa !important;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem !important;
+}
+
+.pt-2 {
+    padding-top: 0.5rem !important;
+}
+
+.pl-4 {
+    padding-left: 1.5rem !important;
+}
+
+.ml-2 {
+    margin-left: 0.5rem !important;
+}
+
+.fa {
+    margin-right: 0.25rem;
+}
+
+.progress {
+    height: 1rem;
+    overflow: hidden;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
+    transition: width 0.6s ease;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.control-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 2px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+}
+
+.form-row > .col-sm-6 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.help-block {
+    font-size: 0.875rem;
+    color: #e3342f;
+}
+
+#sendMessageButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+
+.container {
+    background-color: #ffffff;
+    padding: 2rem 0;
+}
+
+
+.title {
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.row {
+    padding: 0 1.5rem;
+}
+
+.col-12 {
+    margin-bottom: 1rem;
+}
+
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+
+.row .col-sm-6 {
+    padding: 0.5rem 0;
+}
+
+h5 {
+    display: inline-block;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.text-primary {
+    color: #007bff;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 2rem 0;
+}
+
+
+.title {
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.row {
+    padding: 0 1.5rem;
+}
+
+.col-12 {
+    margin-bottom: 1rem;
+}
+
+.skill {
+    margin-bottom: 1rem;
+}
+
+.skill .d-flex {
+    justify-content: space-between;
+}
+
+.skill p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.progress {
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.progress-bar.bg-primary {
+    background-color: #007bff;
+}
+
+.progress-bar.bg-warning {
+    background-color: #ffc107;
+}
+
+.progress-bar.bg-danger {
+    background-color: #dc3545;
+}
+
+.progress-bar.bg-danger {
+    background-color: #00ff55;
+}
+
+    </style>
+    <nav>
+        <div class="nav__content">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="section">
+        <div class="section__container">
+          <div class="content">
+            <p class="subtitle">HELLO</p>
+            <h1 class="title">
+              I'm <span>Naveen Kumar<br />a</span> Web Developer
+            </h1>
+            <p class="description">
+              Welcome to my web developer portfolio! I'm Naveen Kumar, a skilled and
+              creative web developer with a passion for creating beautiful,
+              responsive, and user-friendly websites. I've worked on a variety of
+              web projects, ranging from personal blogs to e-commerce platforms.
+            </p>
+            <div class="action__btns">
+              <button class="hire__me">Hire Me</button>
+              <button class="portfolio">Portfolio</button>
+            </div>
+          </div>
+          <div class="image">
+            <img src="pic.png" alt="profile" />
+
+
+          </div>
+        </div>
+      </section>
+
+                <div class="container bg-white py-5">
+                    <div class="row px-3">
+                        <div class="col-12">
+                            <h2 class="title position-relative pb-2 mb-4">About Me</h2>
+                        </div>
+                        <div class="col-12">
+                            <p>Sea et gubergren justo invidunt at amet clita. Justo sit justo tempor et invidunt voluptua, lorem voluptua ipsum gubergren et est nonumy magna et vero, sit eos dolor sea sed et dolor erat et. Accusam accusam magna aliquyam eirmod amet est kasd dolore sanctus. Lorem ea vero lorem eos eos sanctus labore. Aliquyam vero ipsum dolor duo clita consetetur stet, aliquyam ipsum sea sed et magna amet dolor.</p>
+                            <div class="row">
+                                <div class="col-sm-6 py-1">
+                                    <h5 class="d-inline text-primary">Name:</h5> John Doe
+                                </div>
+                                <div class="col-sm-6 py-1">
+                                    <h5 class="d-inline text-primary">Birthday:</h5> 1 April 1990
+                                </div>
+                                <div class="col-sm-6 py-1">
+                                    <h5 class="d-inline text-primary">Degree:</h5> Master
+                                </div>
+                                <div class="col-sm-6 py-1">
+                                    <h5 class="d-inline text-primary">Experience:</h5> 10 Years
+                                </div>
+                                <div class="col-sm-6 py-1">
+                                    <h5 class="d-inline text-primary">Phone:</h5> +012 345 6789
+                                </div>
+                                <div class="col-sm-6 py-1">
+                                    <h5 class="d-inline text-primary">Email:</h5> info@example.com
+                                </div>
+                                <div class="col-sm-6 py-1">
+                                    <h5 class="d-inline text-primary">Address:</h5> 123 Street, New York, USA
+                                </div>
+                                <div class="col-sm-6 py-1">
+                                    <h5 class="d-inline text-primary">Freelance:</h5> Available
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+  <div class="container bg-white py-5">
+  <div class="row px-3">
+  <div class="col-12">
+    <h2 class="title position-relative pb-2 mb-4">Skills</h2>
+  </div>
+  <div class="col-sm-6">
+    <div class="skill mb-4">
+        <div class="d-flex justify-content-between">
+            <p class="mb-2">HTML</p>
+            <p class="mb-2">95%</p>
+        </div>
+        <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <div class="skill mb-4">
+        <div class="d-flex justify-content-between">
+            <p class="mb-2">CSS</p>
+            <p class="mb-2">85%</p>
+        </div>
+        <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <div class="skill mb-4">
+        <div class="d-flex justify-content-between">
+            <p class="mb-2">PHP</p>
+            <p class="mb-2">90%</p>
+        </div>
+        <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+  </div>
+  <div class="container bg-white py-5">
+  <div class="row px-3">
+  <div class="col-12">
+    <h2 class="title position-relative pb-2 mb-4">Expericence</h2>
+  </div>
+  <div class="col-12">
+    <div class="border-left border-primary pt-2 pl-4 ml-2">
+        <div class="position-relative mb-4">
+            <i class="fa fa-arrow-right text-primary position-absolute"style="top: 3px; left: -24px;"></i>
+            <h5 class="mb-1">Web Designer</h5>
+            <p class="mb-2">Soft Company | <small>2000 - 2050</small></p>
+            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+        </div>
+        <div class="position-relative mb-4">
+            <i class="fa fa-arrow-right text-primary position-absolute"style="top: 3px; left: -24px;"></i>
+            <h5 class="mb-1">Web Designer</h5>
+            <p class="mb-2">Soft Company | <small>2000 - 2050</small></p>
+            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+        </div>
+        <div class="position-relative mb-4">
+            <i class="fa fa-arrow-right text-primary position-absolute"style="top: 3px; left: -24px;"></i>
+            <h5 class="mb-1">Web Designer</h5>
+            <p class="mb-2">Soft Company | <small>2000 - 2050</small></p>
+            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+        </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="container bg-white py-5" id="contact">
+  <div class="row px-3">
+  <div class="col-12">
+    <h2 class="title position-relative pb-2 mb-4">Contact Me</h2>
+  </div>
+  <div class="col-12">
+    <div class="contact-form">
+        <div id="success"></div>
+        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <div class="form-row">
+                <div class="control-group col-sm-6">
+                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                        required="required" data-validation-required-message="Please enter your name" />
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="control-group col-sm-6">
+                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                        required="required" data-validation-required-message="Please enter your email" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="control-group">
+                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
+                    required="required" data-validation-required-message="Please enter a subject" />
+                <p class="help-block text-danger"></p>
+            </div>
+            <div class="control-group">
+                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                    required="required"
+                    data-validation-required-message="Please enter your message"></textarea>
+                <p class="help-block text-danger"></p>
+            </div>
+            <div>
+                <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send Message</button>
+            </div>
+        </form>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
